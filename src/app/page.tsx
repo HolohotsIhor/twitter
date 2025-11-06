@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
+      <div className="flex min-h-screen items-center justify-center bg-sky-500 text-white text-3xl">Some text</div>
       <main className={styles.main}>
         <Image
           className={styles.logo}
