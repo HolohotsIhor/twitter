@@ -6,4 +6,4 @@ export const PAGES = {
 
 export default PAGES;
 
-export const PROFILE = (username: string) => `/u/${encodeURIComponent(username)}`;
+export const PROFILE = (username: string) => `/u/${username}`;

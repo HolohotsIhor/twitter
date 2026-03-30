@@ -1,6 +1,6 @@
 type Params = {tag?: string};
 
-export default async function Page({
+export default async function PageProfile({
     searchParams
 }: {
     searchParams: Promise<Params>
