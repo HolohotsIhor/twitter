@@ -14,8 +14,8 @@ const nextConfig = {
             options: {
               postcssOptions: {
                 plugins: {
-                  'tailwindcss': {},
-                  'autoprefixer': {},
+                  tailwindcss: {},
+                  autoprefixer: {},
                 },
               },
             },
@@ -24,6 +24,6 @@ const nextConfig = {
       },
     },
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

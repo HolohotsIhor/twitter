@@ -1,22 +1,24 @@
-import { PAGES } from "@/config/pages.config"
-import Link from "next/link"
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { MenuItem } from './MenuItem';
+import { MENU } from './data/menu.data';
+import { match } from 'path-to-regexp';
 
 const Menu = () => {
-  const linkClasses = "text-white/90 hover:text-white transition-colors"
+  const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex items-center gap-6">
-      <Link href={PAGES.HOME} className={linkClasses}>
-        Home
-      </Link>
-      <Link href={PAGES.EXPLORE} className={linkClasses}>
-        Explore
-      </Link>
-      <Link href={PAGES.PROFILE_FAKE} className={linkClasses}>
-        Profile
-      </Link>
+    <nav className='hidden md:flex items-center gap-6'>
+      {MENU.map((menuItem) => (
+        <MenuItem
+          key={menuItem.text}
+          menuItem={menuItem}
+          isActive={!!match(menuItem.href)(pathname)} // pathname === menuItem.href
+        />
+      ))}
     </nav>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

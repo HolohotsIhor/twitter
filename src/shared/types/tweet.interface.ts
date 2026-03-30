@@ -1,6 +1,6 @@
 export interface ITweet {
-    id: number
-    text: string
-    author: string
-    skills?: string
+  id: number;
+  text: string;
+  author: string;
+  skills?: string;
 }

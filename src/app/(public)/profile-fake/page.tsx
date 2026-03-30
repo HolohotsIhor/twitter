@@ -1,9 +1,13 @@
-interface Props {}
+import type { Metadata } from "next"
+import Profile from "./Profile"
 
-const ProfileFakePage = ({}: Props) => {
+export const metadata: Metadata = {
+  title: 'Profile page',
+  description: 'Profile page',
+}
+
+export default function ProfilePage() {
   return (
-    <div>ProfileFakePage</div>
-  );
-};
-
-export default ProfileFakePage;
+    <Profile />
+  )
+}
