@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['cdn.dummyjson.com', 'fakestoreapi.com'],
+  },
   experimental: {
     turbo: {
       rules: {
-        // Disable the PostCSS transform for CSS modules
         '*.module.css': ['style-loader', 'css-loader'],
-        // Configure the PostCSS transform for global CSS
         '*.css': [
           'style-loader',
           'css-loader',

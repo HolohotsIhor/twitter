@@ -25,6 +25,7 @@ export default function TweetForm() {
           <button
             type='submit'
             className='bg-white hover:bg-gray-300 transition-colors text-black font-semibold px-5 py-1.5 rounded-full text-sm'
+            tabIndex={0}
           >
             Post
           </button>

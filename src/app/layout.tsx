@@ -23,15 +23,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  type User = {
-    name: string;
-    age: number;
-  };
-
-  type PartialUser = Omit<User, 'name'>;
-
-  const user: PartialUser = { age: 123 };
-  console.log(user);
 
   return (
     <html lang='en'>
